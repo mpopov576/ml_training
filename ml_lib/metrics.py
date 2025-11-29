@@ -38,3 +38,9 @@ def r2_score(y_true, y_pred):
     ss_tot = np.sum((y_true - y_mean)**2)
     ss_res = np.sum((y_true - y_pred)**2)
     return 1 - ss_res / ss_tot
+
+def root_mean_squared_error(y_true, y_pred):
+    n = y_true.shape[0]
+    s_er = np.sum((y_true - y_pred)**2)
+
+    return np.sqrt(s_er / n)
